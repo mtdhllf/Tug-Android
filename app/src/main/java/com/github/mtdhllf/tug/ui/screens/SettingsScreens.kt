@@ -139,6 +139,11 @@ fun SettingsScreen(onSection: (SettingsSection) -> Unit) {
                 onClick = { onSection(SettingsSection.Appearance) },
             )
             SettingsEntry(
+                title = stringResource(R.string.settings_language),
+                subtitle = languageLabel(languageTag),
+                onClick = { showLanguageDialog = true },
+            )
+            SettingsEntry(
                 title = stringResource(R.string.settings_background),
                 subtitle = stringResource(R.string.settings_background_summary),
                 onClick = { onSection(SettingsSection.Background) },
@@ -147,11 +152,6 @@ fun SettingsScreen(onSection: (SettingsSection) -> Unit) {
                 title = stringResource(R.string.settings_about),
                 subtitle = stringResource(R.string.settings_about_summary),
                 onClick = { onSection(SettingsSection.About) },
-            )
-            SettingsEntry(
-                title = stringResource(R.string.settings_language),
-                subtitle = languageLabel(languageTag),
-                onClick = { showLanguageDialog = true },
             )
         }
 
@@ -225,7 +225,8 @@ fun SettingsSectionScreen(section: SettingsSection, onBack: () -> Unit) {
 
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .weight(1f)
+                .fillMaxWidth()
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
