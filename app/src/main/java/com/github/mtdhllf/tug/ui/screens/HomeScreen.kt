@@ -28,6 +28,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -60,6 +62,8 @@ fun HomeScreen(
 ) {
     val app = LocalContext.current.applicationContext as TugApp
     val context = LocalContext.current
+    val focusManager = LocalFocusManager.current
+    val keyboardController = LocalSoftwareKeyboardController.current
     val viewModelFactory = remember { TugViewModelFactory(app) }
     val homeViewModel: HomeViewModel = viewModel(factory = viewModelFactory)
 
@@ -141,20 +145,24 @@ fun HomeScreen(
                         }
                         if (error != null) {
                             quickError = error
-                        } else if (
-                            kindFor(target) == TaskKind.Torrent &&
-                            app.settingsRepository.settings.value.btChooseFilesBeforeStart
-                        ) {
-                            // 开启"BT 下载前选择文件"时，转到新建面板解析并勾选
-                            quickUrl = ""
-                            onTorrentAdd(target)
                         } else {
-                            scope.launch {
-                                ensureNotificationPermission()
-                                DownloadService.start(context)
-                                app.taskManager.add(NewTask(url = target))
+                            keyboardController?.hide()
+                            focusManager.clearFocus()
+                            if (
+                                kindFor(target) == TaskKind.Torrent &&
+                                app.settingsRepository.settings.value.btChooseFilesBeforeStart
+                            ) {
+                                // 开启"BT 下载前选择文件"时，转到新建面板解析并勾选
                                 quickUrl = ""
-                                snackbar?.showSnackbar(context.getString(R.string.snackbar_added))
+                                onTorrentAdd(target)
+                            } else {
+                                scope.launch {
+                                    ensureNotificationPermission()
+                                    DownloadService.start(context)
+                                    app.taskManager.add(NewTask(url = target))
+                                    quickUrl = ""
+                                    snackbar?.showSnackbar(context.getString(R.string.snackbar_added))
+                                }
                             }
                         }
                     },
