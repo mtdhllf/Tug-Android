@@ -60,7 +60,7 @@ Tug Android 是 [Tug](https://github.com/mtdhllf/Tug-Desktop) 的 Android 版本
 
 ### 下載核心程式庫
 
-五個程式庫（groupId `io.github.mtdhllf`；Maven Central 發布準備中，目前於儲存庫內可直接使用 project 相依）：
+五個程式庫（groupId `io.github.mtdhllf`；已發布至 Maven Central，亦可於儲存庫內直接使用 project 相依）：
 
 當前版本：![Latest release](https://img.shields.io/github/v/release/mtdhllf/Tug-Android?display_name=tag&sort=semver)
 

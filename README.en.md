@@ -60,7 +60,7 @@ Tug Android is the Android version of [Tug](https://github.com/mtdhllf/Tug-Deskt
 
 ### Download Libraries
 
-Five libraries under groupId `io.github.mtdhllf` (Maven Central publishing pending; project dependencies can be used directly inside this repository):
+Five libraries under groupId `io.github.mtdhllf` (published to Maven Central; project dependencies can also be used directly inside this repository):
 
 Current version: ![Latest release](https://img.shields.io/github/v/release/mtdhllf/Tug-Android?display_name=tag&sort=semver)
 
