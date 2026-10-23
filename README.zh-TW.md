@@ -238,7 +238,7 @@ HTTP 核心預設使用 JDK `HttpURLConnection`（零第三方 HTTP 相依），
 
 ```bash
 # Debug
-./gradlew :app:assembleDebug
+./gradlew :app:assembleUniversalDebug
 
 # 單元測試
 ./gradlew :core:engine-core:test :core:engine-http:test :core:engine-okhttp:test :app:testDebugUnitTest
@@ -247,14 +247,14 @@ HTTP 核心預設使用 JDK `HttpURLConnection`（零第三方 HTTP 相依），
 ./gradlew :sample-http:assembleDebug :sample-torrent:assembleDebug
 
 # 儀器測試（先手動啟動 App，否則 ActivityScenario 可能拿不到前景視窗）
-./gradlew :app:assembleDebugAndroidTest
-adb install -r -t app/build/outputs/apk/debug/app-debug.apk
-adb install -r -t app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+./gradlew :app:assembleUniversalDebugAndroidTest
+adb install -r -t app/build/outputs/apk/universal/debug/app-universal-debug.apk
+adb install -r -t app/build/outputs/apk/androidTest/universal/debug/app-universal-debug-androidTest.apk
 adb shell am instrument -w -e class com.github.mtdhllf.tug.ui.MainUiTest \
   com.github.mtdhllf.tug.test/androidx.test.runner.AndroidJUnitRunner
 
-# Release（AAB / APK）
-./gradlew :app:assembleRelease
+# Release（5 個 ABI 組合 + AAB）
+./gradlew :app:packageReleaseApks
 ```
 
 ### 簽署設定

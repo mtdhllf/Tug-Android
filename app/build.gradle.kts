@@ -1,3 +1,4 @@
+import java.security.MessageDigest
 import java.util.Properties
 
 plugins {
@@ -26,11 +27,29 @@ android {
         versionName = "v1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
 
-        // BT 原生库当前仅提供 arm64-v8a；显式收敛，避免误打包其他 ABI。
-        // 后续补充 armeabi-v7a/x86_64 时同步更新此处与 engine-torrent 依赖。
-        ndk {
-            abiFilters += listOf("arm64-v8a")
+    flavorDimensions += "abi"
+    productFlavors {
+        create("arm64") {
+            dimension = "abi"
+            ndk { abiFilters += "arm64-v8a" }
+        }
+        create("arm") {
+            dimension = "abi"
+            ndk { abiFilters += "armeabi-v7a" }
+        }
+        create("x86") {
+            dimension = "abi"
+            ndk { abiFilters += "x86" }
+        }
+        create("x8664") {
+            dimension = "abi"
+            ndk { abiFilters += "x86_64" }
+        }
+        create("universal") {
+            dimension = "abi"
+            ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86", "x86_64") }
         }
     }
 
@@ -96,6 +115,84 @@ dependencies {
     androidTestImplementation(libs.okhttp.mockwebserver)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
+}
+
+/**
+ * 一键生成 v1.0.0 的按 ABI 拆分 APK、全 ABI APK 和 AAB，并写入 SHA256SUMS。
+ *
+ * 输出：
+ * - tug-arm64-v1.0.0.apk
+ * - tug-arm-v1.0.0.apk
+ * - tug-v1.0.0.apk（全 ABI）
+ * - tug-x86-v1.0.0.apk
+ * - tug-x86_64-v1.0.0.apk
+ * - tug-v1.0.0.aab
+ * - SHA256SUMS.txt
+ */
+val releaseAppVersion = android.defaultConfig.versionName ?: "v1.0.0"
+val releaseApkRoot = layout.buildDirectory.dir("outputs/apk").get().asFile
+val releaseBundleFile = layout.buildDirectory
+    .file("outputs/bundle/universalRelease/app-universal-release.aab").get().asFile
+val releaseOutDir = rootProject.layout.projectDirectory.dir("release/v1.0.0").asFile
+
+val packageReleaseApks = tasks.register("packageReleaseApks") {
+    group = "build"
+    description = "Build ABI split APKs, universal APK and AAB, then copy them to release/v1.0.0."
+    notCompatibleWithConfigurationCache("Copies assembled release outputs into release/v1.0.0.")
+    dependsOn(
+        "assembleArm64Release",
+        "assembleArmRelease",
+        "assembleX86Release",
+        "assembleX8664Release",
+        "assembleUniversalRelease",
+        "bundleUniversalRelease",
+    )
+
+    doLast {
+        fun findApk(name: String): File =
+            releaseApkRoot.walkTopDown().firstOrNull { it.isFile && it.name == name }
+                ?: error("Missing APK output: $name (searched $releaseApkRoot)")
+
+        releaseOutDir.mkdirs()
+        val targets = linkedMapOf(
+            findApk("app-universal-release.apk") to "tug-$releaseAppVersion.apk",
+            findApk("app-arm64-release.apk") to "tug-arm64-$releaseAppVersion.apk",
+            findApk("app-arm-release.apk") to "tug-arm-$releaseAppVersion.apk",
+            findApk("app-x86-release.apk") to "tug-x86-$releaseAppVersion.apk",
+            findApk("app-x8664-release.apk") to "tug-x86_64-$releaseAppVersion.apk",
+            releaseBundleFile to "tug-$releaseAppVersion.aab",
+        )
+
+        targets.forEach { (source, name) ->
+            require(source.isFile) { "Missing build output: ${source.absolutePath}" }
+            source.copyTo(releaseOutDir.resolve(name), overwrite = true)
+        }
+
+        val digest = MessageDigest.getInstance("SHA-256")
+        val checksums = targets.values.map { name ->
+            digest.reset()
+            val hash = digest.digest(releaseOutDir.resolve(name).readBytes())
+                .joinToString("") { "%02X".format(it) }
+            "$hash  $name"
+        }
+        releaseOutDir.resolve("SHA256SUMS.txt").writeText(
+            checksums.joinToString("\n", postfix = "\n"),
+        )
+        println("Release artifacts written to ${releaseOutDir.absolutePath}")
+    }
+}
+
+// 保留原有命令：:app:testDebugUnitTest 会覆盖所有 ABI flavor。
+tasks.register("testDebugUnitTest") {
+    group = "verification"
+    description = "Run unit tests for every ABI flavor."
+    dependsOn(
+        "testArm64DebugUnitTest",
+        "testArmDebugUnitTest",
+        "testX86DebugUnitTest",
+        "testX8664DebugUnitTest",
+        "testUniversalDebugUnitTest",
+    )
 }
 
 

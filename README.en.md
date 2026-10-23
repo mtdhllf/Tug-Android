@@ -238,7 +238,7 @@ Requirements:
 
 ```bash
 # Debug
-./gradlew :app:assembleDebug
+./gradlew :app:assembleUniversalDebug
 
 # Unit tests
 ./gradlew :core:engine-core:test :core:engine-http:test :core:engine-okhttp:test :app:testDebugUnitTest
@@ -247,14 +247,14 @@ Requirements:
 ./gradlew :sample-http:assembleDebug :sample-torrent:assembleDebug
 
 # Instrumented tests (start the app manually first; otherwise ActivityScenario may not get a foreground window)
-./gradlew :app:assembleDebugAndroidTest
-adb install -r -t app/build/outputs/apk/debug/app-debug.apk
-adb install -r -t app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+./gradlew :app:assembleUniversalDebugAndroidTest
+adb install -r -t app/build/outputs/apk/universal/debug/app-universal-debug.apk
+adb install -r -t app/build/outputs/apk/androidTest/universal/debug/app-universal-debug-androidTest.apk
 adb shell am instrument -w -e class com.github.mtdhllf.tug.ui.MainUiTest \
   com.github.mtdhllf.tug.test/androidx.test.runner.AndroidJUnitRunner
 
-# Release (AAB / APK)
-./gradlew :app:assembleRelease
+# Release (5 ABI variants + AAB)
+./gradlew :app:packageReleaseApks
 ```
 
 ### Signing
