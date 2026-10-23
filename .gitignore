@@ -1,0 +1,40 @@
+# 构建产物
+build/
+**/build/
+.gradle/
+.kotlin/
+captures/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# 本机配置（不入库）
+local.properties
+keystore.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# 内部开发资料（不对外发布）
+docs/
+
+# 发布产物（由 GitHub Releases / CI 管理，源码仓库不提交）
+release/
+
+# 签名与本地密钥材料
+*.asc
+*.gpg
+*.p12
+.env
+

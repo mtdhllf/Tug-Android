@@ -1,0 +1,255 @@
+<resources>
+    <string name="app_name">Tug</string>
+    <string name="nav_home">首页</string>
+    <string name="nav_tasks">任务</string>
+    <string name="nav_settings">设置</string>
+    <string name="fab_new">新建</string>
+
+    <!-- Common -->
+    <string name="common_cancel">取消</string>
+    <string name="common_delete">删除</string>
+    <string name="common_back">返回</string>
+    <string name="common_open_file">打开文件</string>
+    <string name="common_share_file">分享文件</string>
+    <string name="common_copy_link">复制链接</string>
+    <string name="common_pause">暂停</string>
+    <string name="common_resume">继续</string>
+    <string name="common_start_download">开始下载</string>
+    <string name="common_all">全部</string>
+    <string name="common_unknown">未知</string>
+
+    <string name="snackbar_added">已加入下载队列</string>
+    <string name="snackbar_deleted">已删除</string>
+    <string name="snackbar_link_copied">链接已复制</string>
+    <string name="snackbar_paused_selected">已暂停选中任务</string>
+    <string name="snackbar_resumed_selected">已继续选中任务</string>
+
+    <string name="error_create_task">创建任务失败</string>
+    <string name="error_read_torrent">读取 .torrent 文件失败</string>
+    <string name="error_parse_torrent">解析种子失败</string>
+    <string name="error_need_url">请输入下载链接</string>
+    <string name="error_need_url_or_torrent">请输入下载链接或选择 .torrent 文件</string>
+    <string name="error_unsupported_url">仅支持 HTTP/HTTPS 或磁力链接</string>
+
+    <!-- Task states -->
+    <string name="state_queued">队列中</string>
+    <string name="state_fetching">获取信息</string>
+    <string name="state_downloading">下载中</string>
+    <string name="state_paused">已暂停</string>
+    <string name="state_seeding">做种中</string>
+    <string name="state_completed">已完成</string>
+    <string name="state_failed">失败</string>
+
+    <!-- Task sort / filter -->
+    <string name="sort_recent">最近</string>
+    <string name="sort_speed">速度</string>
+    <string name="sort_name">名称</string>
+    <string name="filter_all">全部</string>
+    <string name="filter_downloading">下载中</string>
+    <string name="filter_completed">已完成</string>
+    <string name="filter_failed">失败</string>
+
+    <!-- Task components -->
+    <string name="remaining">剩余 %1$s</string>
+    <string name="content_open_file">打开文件</string>
+    <string name="content_pause_resume">暂停或继续</string>
+    <string name="delete_task_title">删除任务</string>
+    <string name="delete_task_message">确定删除「%1$s」？</string>
+    <string name="delete_files_checkbox">同时删除已下载的文件</string>
+
+    <!-- Home -->
+    <string name="home_subtitle">极速下载 · 断点续传</string>
+    <string name="stat_speed">实时速度</string>
+    <string name="stat_active">进行中</string>
+    <string name="stat_completed">已完成</string>
+    <string name="quick_add">快速添加</string>
+    <string name="more_options">更多选项</string>
+    <string name="quick_add_placeholder">粘贴 HTTP/HTTPS 链接</string>
+    <string name="active_title">进行中</string>
+    <string name="empty_active_title">暂无进行中的任务</string>
+    <string name="empty_active_subtitle">粘贴链接即可开始下载</string>
+    <string name="recent_completed">最近完成</string>
+    <string name="empty_completed_title">还没有完成的下载</string>
+    <string name="empty_completed_subtitle">完成的任务会出现在这里</string>
+
+    <!-- Task list -->
+    <string name="tasks_title">全部任务</string>
+    <string name="content_sort">排序</string>
+    <string name="search_placeholder">搜索名称、链接或错误</string>
+    <string name="empty_no_match">没有匹配的任务</string>
+    <string name="empty_category">该分类暂无任务</string>
+    <string name="empty_tasks_subtitle">点击右下角 + 新建下载</string>
+    <string name="empty_filter_subtitle">试试切换筛选条件</string>
+    <string name="new_task">新建任务</string>
+    <string name="delete_selected_tasks">删除 %1$d 个任务</string>
+    <string name="selected_count">已选 %1$d</string>
+    <string name="content_exit_selection">退出选择</string>
+    <string name="content_select_all">全选</string>
+    <string name="content_pause_selected">暂停选中</string>
+    <string name="content_resume_selected">继续选中</string>
+    <string name="content_delete_selected">删除选中</string>
+
+    <!-- Add task -->
+    <string name="add_title">新建下载</string>
+    <string name="url_label">下载链接</string>
+    <string name="url_placeholder">https://example.com/file.zip</string>
+    <string name="selected_torrent_file">已选择种子文件：%1$s</string>
+    <string name="url_support">支持 HTTP/HTTPS、磁力链接，或选择本地 .torrent 文件</string>
+    <string name="choose_torrent">选择 .torrent 文件</string>
+    <string name="reselect_torrent">重新选择 .torrent 文件</string>
+    <string name="file_name_label">文件名（可选）</string>
+    <string name="torrent_no_filename">已选择 .torrent 文件，不支持自定义文件名</string>
+    <string name="file_name_hint">留空则由服务器决定</string>
+    <string name="connections">连接数</string>
+    <string name="connections_subtitle">分片下载并发数</string>
+    <string name="content_dec_connections">减少连接数</string>
+    <string name="content_inc_connections">增加连接数</string>
+    <string name="parsing">解析中…</string>
+    <string name="processing">处理中…</string>
+    <string name="choose_files_title">选择下载文件（%1$d 个）</string>
+
+    <!-- Task detail -->
+    <string name="detail_title">任务详情</string>
+    <string name="task_missing_title">任务不存在</string>
+    <string name="task_missing_subtitle">可能已被删除</string>
+    <string name="speed_remaining">速度 %1$s · 剩余 %2$s</string>
+    <string name="info_link">链接</string>
+    <string name="info_save_location">保存位置</string>
+    <string name="info_task_type">任务类型</string>
+    <string name="info_peers">Peers</string>
+    <string name="info_uploaded">已上传</string>
+    <string name="info_connections">连接数</string>
+    <string name="files_count">文件（%1$d）</string>
+    <string name="peers_count">Peers（%1$d）</string>
+    <string name="trackers_count">Trackers（%1$d）</string>
+    <string name="no_peers">暂无连接</string>
+    <string name="no_trackers">暂无 Tracker</string>
+    <string name="task_type_http">HTTP/HTTPS</string>
+    <string name="task_type_torrent">BitTorrent</string>
+
+    <!-- Settings overview -->
+    <string name="settings_title">设置</string>
+    <string name="settings_download_network">下载与网络</string>
+    <string name="settings_download">下载</string>
+    <string name="settings_download_summary">并发 %1$d · 连接 %2$d · 限速 %3$s</string>
+    <string name="settings_network">网络</string>
+    <string name="settings_network_wifi_only">仅 Wi-Fi 下载</string>
+    <string name="settings_network_mobile">允许移动网络下载</string>
+    <string name="settings_notifications">通知</string>
+    <string name="settings_notifications_on">通知已开启</string>
+    <string name="settings_notifications_off">通知已关闭，点击去开启</string>
+    <string name="settings_app">应用</string>
+    <string name="settings_appearance">外观</string>
+    <string name="settings_appearance_summary">主题：%1$s%2$s</string>
+    <string name="settings_dynamic_color_suffix">\u0020· 动态取色</string>
+    <string name="settings_background">后台与电池</string>
+    <string name="settings_background_summary">保活与省电策略</string>
+    <string name="settings_about">关于与诊断</string>
+    <string name="settings_about_summary">版本、引擎、存储位置</string>
+    <string name="settings_save_location">保存位置：%1$s</string>
+
+    <!-- Settings: download -->
+    <string name="settings_concurrency">并发与连接</string>
+    <string name="settings_max_tasks">同时下载任务数</string>
+    <string name="settings_max_tasks_subtitle">1–16</string>
+    <string name="settings_connections">单任务连接数</string>
+    <string name="settings_connections_subtitle">1–32，仅对新任务生效</string>
+    <string name="settings_bt_choose">BT 下载前选择文件</string>
+    <string name="settings_bt_choose_subtitle">开启后先解析种子并勾选文件；默认关闭，直接入队下载全部文件</string>
+    <string name="settings_global_limit">全局限速</string>
+    <string name="settings_global_limit_desc">所有任务共享的下载带宽上限</string>
+    <string name="limit_unlimited">不限</string>
+    <string name="limit_1mb">1 MB/s</string>
+    <string name="limit_2mb">2 MB/s</string>
+    <string name="limit_5mb">5 MB/s</string>
+    <string name="settings_save_location_title">保存位置</string>
+    <string name="settings_save_desc">下载中写入应用私有暂存区，完成后发布到该目录。</string>
+
+    <!-- Settings: network -->
+    <string name="settings_wifi_only">仅 Wi-Fi 下载</string>
+    <string name="settings_wifi_only_subtitle">移动网络下自动暂停，回到 Wi-Fi 后继续</string>
+    <string name="settings_network_policy">断网或条件不满足时任务会自动暂停；恢复后仅继续由策略暂停的任务。</string>
+
+    <!-- Settings: notifications -->
+    <string name="settings_notifications_enabled">通知已开启：后台进度与完成提醒可见。</string>
+    <string name="settings_notifications_disabled">通知已关闭：后台进度与完成提醒不可见。</string>
+    <string name="settings_open_notification_settings">打开系统通知设置</string>
+    <string name="settings_enable_notifications">去开启通知</string>
+
+    <!-- Settings: appearance -->
+    <string name="settings_theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="settings_dynamic_color">动态取色</string>
+    <string name="settings_dynamic_color_subtitle">使用系统壁纸配色（Android 12+）</string>
+    <string name="settings_dynamic_color_unsupported">当前系统不支持，自动使用品牌色</string>
+
+    <!-- Settings: background -->
+    <string name="settings_background_title">后台下载</string>
+    <string name="settings_background_desc">下载期间使用前台服务与 CPU 唤醒锁保持进度；系统省电策略仍可能限制长时间后台任务。</string>
+    <string name="settings_open_battery">打开电池优化设置</string>
+    <string name="settings_open_app">打开应用设置</string>
+
+    <!-- Settings: about -->
+    <string name="settings_version">版本</string>
+    <string name="settings_version_desc">Kotlin · JDK HTTP · SQLite · libtorrent4j</string>
+    <string name="settings_system">系统</string>
+    <string name="settings_android_version">Android %1$s（API %2$d）</string>
+    <string name="settings_abi">ABI：%1$s</string>
+    <string name="settings_storage">存储</string>
+    <string name="settings_download_dir">下载目录：%1$s</string>
+    <string name="settings_staging_dir">暂存目录：%1$s</string>
+    <string name="settings_engine">引擎</string>
+    <string name="settings_http_engine">HTTP：分片下载 / 断点续传 / 断网自愈 / 限速</string>
+    <string name="settings_bt_engine">BT：libtorrent4j 2.1.0-39（magnet / .torrent）</string>
+    <string name="settings_open_source">开源组件</string>
+    <string name="settings_open_source_desc">Kotlin · kotlinx-coroutines · kotlinx-serialization · Jetpack Compose · Material 3 · libtorrent4j</string>
+    <string name="content_dec">减少</string>
+    <string name="content_inc">增加</string>
+
+    <!-- Notifications -->
+    <string name="notification_preparing">准备下载…</string>
+    <string name="notification_completed">下载完成</string>
+    <string name="notification_failed">下载失败</string>
+    <string name="notification_service_running">下载服务运行中</string>
+    <string name="notification_tasks_count">\u0020· 共 %1$d 个任务</string>
+    <string name="notification_active">进行中 %1$d 个 · %2$s</string>
+    <string name="notification_queued">已排队 %1$d 个任务</string>
+    <string name="notification_pause_all">全部暂停</string>
+    <string name="notification_title">Tug 下载</string>
+    <string name="channel_progress">下载进度</string>
+    <string name="channel_progress_desc">下载中的常驻进度通知</string>
+    <string name="channel_done">下载结果</string>
+    <string name="channel_done_desc">下载完成或失败的通知</string>
+
+    <!-- File operations -->
+    <string name="share_file">分享文件</string>
+    <string name="clipboard_download_link">下载链接</string>
+
+    <!-- Publish errors -->
+    <string name="publish_source_missing">暂存文件不存在：%1$s</string>
+    <string name="publish_dir_missing">暂存目录不存在：%1$s</string>
+    <string name="publish_dir_empty">暂存目录为空：%1$s</string>
+    <string name="publish_create_entry_failed">无法创建文件条目：%1$s</string>
+    <string name="publish_open_output_failed">无法打开目标写入流：%1$s</string>
+    <string name="publish_dir_failed">发布目录失败</string>
+    <string name="publish_save_dir_failed">保存目录到下载目录失败：%1$s</string>
+    <string name="publish_create_dir_failed">无法创建下载目录：%1$s</string>
+    <string name="publish_move_dir_failed">移动目录失败：%1$s</string>
+    <string name="publish_create_entry_generic_failed">无法在下载目录创建文件条目</string>
+    <string name="publish_open_output_generic_failed">无法打开目标文件写入流</string>
+    <string name="publish_save_failed">保存到下载目录失败：%1$s</string>
+    <string name="publish_move_failed">移动到下载目录失败：%1$s</string>
+
+    <!-- Language -->
+    <string name="settings_language">语言</string>
+    <string name="language_system">跟随系统</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_zh_tw">繁體中文</string>
+    <string name="language_en">English</string>
+    <string name="language_es">Español</string>
+    <string name="language_hi">हिन्दी</string>
+    <string name="language_ar">العربية</string>
+    <string name="language_dialog_title">选择语言</string>
+</resources>

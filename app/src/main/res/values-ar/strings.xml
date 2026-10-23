@@ -1,0 +1,255 @@
+<resources>
+    <string name="app_name">Tug</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_tasks">المهام</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="fab_new">جديد</string>
+
+    <!-- Common -->
+    <string name="common_cancel">إلغاء</string>
+    <string name="common_delete">حذف</string>
+    <string name="common_back">رجوع</string>
+    <string name="common_open_file">فتح الملف</string>
+    <string name="common_share_file">مشاركة الملف</string>
+    <string name="common_copy_link">نسخ الرابط</string>
+    <string name="common_pause">إيقاف مؤقت</string>
+    <string name="common_resume">استئناف</string>
+    <string name="common_start_download">بدء التنزيل</string>
+    <string name="common_all">الكل</string>
+    <string name="common_unknown">غير معروف</string>
+
+    <string name="snackbar_added">تمت الإضافة إلى قائمة التنزيل</string>
+    <string name="snackbar_deleted">تم الحذف</string>
+    <string name="snackbar_link_copied">تم نسخ الرابط</string>
+    <string name="snackbar_paused_selected">تم إيقاف المهام المحددة مؤقتًا</string>
+    <string name="snackbar_resumed_selected">تم استئناف المهام المحددة</string>
+
+    <string name="error_create_task">فشل إنشاء المهمة</string>
+    <string name="error_read_torrent">فشل قراءة ملف .torrent</string>
+    <string name="error_parse_torrent">فشل تحليل التورنت</string>
+    <string name="error_need_url">أدخل رابط تنزيل</string>
+    <string name="error_need_url_or_torrent">أدخل رابط تنزيل أو اختر ملف .torrent</string>
+    <string name="error_unsupported_url">يُدعم فقط HTTP/HTTPS أو روابط magnet</string>
+
+    <!-- Task states -->
+    <string name="state_queued">في قائمة الانتظار</string>
+    <string name="state_fetching">جارٍ جلب البيانات الوصفية</string>
+    <string name="state_downloading">جارٍ التنزيل</string>
+    <string name="state_paused">متوقف مؤقتًا</string>
+    <string name="state_seeding">جارٍ البذر</string>
+    <string name="state_completed">مكتمل</string>
+    <string name="state_failed">فشل</string>
+
+    <!-- Task sort / filter -->
+    <string name="sort_recent">الأحدث</string>
+    <string name="sort_speed">السرعة</string>
+    <string name="sort_name">الاسم</string>
+    <string name="filter_all">الكل</string>
+    <string name="filter_downloading">جارٍ التنزيل</string>
+    <string name="filter_completed">مكتمل</string>
+    <string name="filter_failed">فشل</string>
+
+    <!-- Task components -->
+    <string name="remaining">المتبقي %1$s</string>
+    <string name="content_open_file">فتح الملف</string>
+    <string name="content_pause_resume">إيقاف مؤقت أو استئناف</string>
+    <string name="delete_task_title">حذف المهمة</string>
+    <string name="delete_task_message">حذف «%1$s»؟</string>
+    <string name="delete_files_checkbox">حذف الملفات المنزّلة أيضًا</string>
+
+    <!-- Home -->
+    <string name="home_subtitle">تنزيلات سريعة · دعم الاستئناف</string>
+    <string name="stat_speed">السرعة المباشرة</string>
+    <string name="stat_active">نشط</string>
+    <string name="stat_completed">مكتمل</string>
+    <string name="quick_add">إضافة سريعة</string>
+    <string name="more_options">مزيد من الخيارات</string>
+    <string name="quick_add_placeholder">ألصق رابط HTTP/HTTPS</string>
+    <string name="active_title">النشطة</string>
+    <string name="empty_active_title">لا توجد تنزيلات نشطة</string>
+    <string name="empty_active_subtitle">ألصق رابطًا لبدء التنزيل</string>
+    <string name="recent_completed">اكتملت مؤخرًا</string>
+    <string name="empty_completed_title">لا توجد تنزيلات مكتملة بعد</string>
+    <string name="empty_completed_subtitle">ستظهر التنزيلات المكتملة هنا</string>
+
+    <!-- Task list -->
+    <string name="tasks_title">كل المهام</string>
+    <string name="content_sort">ترتيب</string>
+    <string name="search_placeholder">ابحث بالاسم أو الرابط أو الخطأ</string>
+    <string name="empty_no_match">لا توجد مهام مطابقة</string>
+    <string name="empty_category">لا توجد مهام في هذه الفئة</string>
+    <string name="empty_tasks_subtitle">اضغط + لإنشاء تنزيل</string>
+    <string name="empty_filter_subtitle">جرّب عامل تصفية آخر</string>
+    <string name="new_task">مهمة جديدة</string>
+    <string name="delete_selected_tasks">حذف %1$d مهمة</string>
+    <string name="selected_count">تم تحديد %1$d</string>
+    <string name="content_exit_selection">إنهاء التحديد</string>
+    <string name="content_select_all">تحديد الكل</string>
+    <string name="content_pause_selected">إيقاف المحدد مؤقتًا</string>
+    <string name="content_resume_selected">استئناف المحدد</string>
+    <string name="content_delete_selected">حذف المحدد</string>
+
+    <!-- Add task -->
+    <string name="add_title">تنزيل جديد</string>
+    <string name="url_label">رابط التنزيل</string>
+    <string name="url_placeholder">https://example.com/file.zip</string>
+    <string name="selected_torrent_file">تم اختيار ملف .torrent: %1$s</string>
+    <string name="url_support">يدعم روابط HTTP/HTTPS وmagnet وملف .torrent محلي</string>
+    <string name="choose_torrent">اختيار ملف .torrent</string>
+    <string name="reselect_torrent">اختيار ملف .torrent آخر</string>
+    <string name="file_name_label">اسم الملف (اختياري)</string>
+    <string name="torrent_no_filename">الأسماء المخصصة للملفات غير مدعومة في ملفات .torrent</string>
+    <string name="file_name_hint">اتركه فارغًا لاستخدام الاسم المقدم من الخادم</string>
+    <string name="connections">الاتصالات</string>
+    <string name="connections_subtitle">اتصالات المقاطع المتزامنة</string>
+    <string name="content_dec_connections">تقليل الاتصالات</string>
+    <string name="content_inc_connections">زيادة الاتصالات</string>
+    <string name="parsing">جارٍ التحليل…</string>
+    <string name="processing">جارٍ المعالجة…</string>
+    <string name="choose_files_title">اختيار الملفات (%1$d)</string>
+
+    <!-- Task detail -->
+    <string name="detail_title">تفاصيل المهمة</string>
+    <string name="task_missing_title">المهمة غير موجودة</string>
+    <string name="task_missing_subtitle">ربما تم حذفها</string>
+    <string name="speed_remaining">السرعة %1$s · المتبقي %2$s</string>
+    <string name="info_link">الرابط</string>
+    <string name="info_save_location">موقع الحفظ</string>
+    <string name="info_task_type">نوع المهمة</string>
+    <string name="info_peers">Peers</string>
+    <string name="info_uploaded">تم رفعه</string>
+    <string name="info_connections">الاتصالات</string>
+    <string name="files_count">الملفات (%1$d)</string>
+    <string name="peers_count">Peers (%1$d)</string>
+    <string name="trackers_count">Trackers (%1$d)</string>
+    <string name="no_peers">لا يوجد Peers</string>
+    <string name="no_trackers">لا يوجد Trackers</string>
+    <string name="task_type_http">HTTP/HTTPS</string>
+    <string name="task_type_torrent">BitTorrent</string>
+
+    <!-- Settings overview -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_download_network">التنزيلات والشبكة</string>
+    <string name="settings_download">التنزيلات</string>
+    <string name="settings_download_summary">التزامن %1$d · الاتصالات %2$d · الحد %3$s</string>
+    <string name="settings_network">الشبكة</string>
+    <string name="settings_network_wifi_only">شبكة Wi-Fi فقط</string>
+    <string name="settings_network_mobile">بيانات الجوال مسموحة</string>
+    <string name="settings_notifications">الإشعارات</string>
+    <string name="settings_notifications_on">الإشعارات مفعّلة</string>
+    <string name="settings_notifications_off">الإشعارات معطّلة، اضغط للتفعيل</string>
+    <string name="settings_app">التطبيق</string>
+    <string name="settings_appearance">المظهر</string>
+    <string name="settings_appearance_summary">السمة: %1$s%2$s</string>
+    <string name="settings_dynamic_color_suffix">\u0020· لون ديناميكي</string>
+    <string name="settings_background">الخلفية والبطارية</string>
+    <string name="settings_background_summary">استراتيجية البقاء نشطًا والبطارية</string>
+    <string name="settings_about">حول والتشخيص</string>
+    <string name="settings_about_summary">الإصدار والمحركات وموقع التخزين</string>
+    <string name="settings_save_location">موقع الحفظ: %1$s</string>
+
+    <!-- Settings: download -->
+    <string name="settings_concurrency">التزامن والاتصالات</string>
+    <string name="settings_max_tasks">الحد الأقصى للتنزيلات المتزامنة</string>
+    <string name="settings_max_tasks_subtitle">1–16</string>
+    <string name="settings_connections">الاتصالات لكل مهمة</string>
+    <string name="settings_connections_subtitle">1–32، ينطبق على المهام الجديدة</string>
+    <string name="settings_bt_choose">اختيار الملفات قبل تنزيل BT</string>
+    <string name="settings_bt_choose_subtitle">تحليل ملفات torrent واختيار الملفات قبل البدء؛ معطّل افتراضيًا، وسيتم تنزيل كل الملفات</string>
+    <string name="settings_global_limit">حد السرعة العام</string>
+    <string name="settings_global_limit_desc">حد مشترك لعرض نطاق التنزيل</string>
+    <string name="limit_unlimited">غير محدود</string>
+    <string name="limit_1mb">1 ميغابايت/ث</string>
+    <string name="limit_2mb">2 ميغابايت/ث</string>
+    <string name="limit_5mb">5 ميغابايت/ث</string>
+    <string name="settings_save_location_title">موقع الحفظ</string>
+    <string name="settings_save_desc">تُكتب التنزيلات في منطقة تجهيز خاصة بالتطبيق وتُنشر هنا عند الاكتمال.</string>
+
+    <!-- Settings: network -->
+    <string name="settings_wifi_only">التنزيل عبر Wi-Fi فقط</string>
+    <string name="settings_wifi_only_subtitle">الإيقاف المؤقت على بيانات الجوال والاستئناف على Wi-Fi</string>
+    <string name="settings_network_policy">تتوقف المهام تلقائيًا عند عدم الاتصال أو عدم تحقق الشروط؛ ولا تُستأنف إلا المهام الموقوفة بموجب السياسة.</string>
+
+    <!-- Settings: notifications -->
+    <string name="settings_notifications_enabled">الإشعارات مفعّلة: تظهر تنبيهات تقدم الخلفية والاكتمال.</string>
+    <string name="settings_notifications_disabled">الإشعارات معطّلة: تنبيهات تقدم الخلفية والاكتمال مخفية.</string>
+    <string name="settings_open_notification_settings">فتح إعدادات الإشعارات</string>
+    <string name="settings_enable_notifications">تفعيل الإشعارات</string>
+
+    <!-- Settings: appearance -->
+    <string name="settings_theme">السمة</string>
+    <string name="theme_system">افتراضي النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="settings_dynamic_color">اللون الديناميكي</string>
+    <string name="settings_dynamic_color_subtitle">استخدام ألوان خلفية النظام (Android 12+)</string>
+    <string name="settings_dynamic_color_unsupported">غير مدعوم على هذا النظام؛ سيتم استخدام ألوان العلامة التجارية</string>
+
+    <!-- Settings: background -->
+    <string name="settings_background_title">التنزيلات في الخلفية</string>
+    <string name="settings_background_desc">تحافظ خدمة الواجهة الأمامية وقفل إيقاظ المعالج على استمرار التنزيلات؛ قد يحد تحسين البطارية من المهام الطويلة في الخلفية.</string>
+    <string name="settings_open_battery">فتح إعدادات تحسين البطارية</string>
+    <string name="settings_open_app">فتح إعدادات التطبيق</string>
+
+    <!-- Settings: about -->
+    <string name="settings_version">الإصدار</string>
+    <string name="settings_version_desc">Kotlin · JDK HTTP · SQLite · libtorrent4j</string>
+    <string name="settings_system">النظام</string>
+    <string name="settings_android_version">Android %1$s (API %2$d)</string>
+    <string name="settings_abi">ABI: %1$s</string>
+    <string name="settings_storage">التخزين</string>
+    <string name="settings_download_dir">مجلد التنزيل: %1$s</string>
+    <string name="settings_staging_dir">مجلد التجهيز: %1$s</string>
+    <string name="settings_engine">المحركات</string>
+    <string name="settings_http_engine">HTTP: تنزيلات مقسمة / استئناف / استرداد دون اتصال / حد المعدل</string>
+    <string name="settings_bt_engine">BT: libtorrent4j 2.1.0-39 (magnet / .torrent)</string>
+    <string name="settings_open_source">المصادر المفتوحة</string>
+    <string name="settings_open_source_desc">Kotlin · kotlinx-coroutines · kotlinx-serialization · Jetpack Compose · Material 3 · libtorrent4j</string>
+    <string name="content_dec">تقليل</string>
+    <string name="content_inc">زيادة</string>
+
+    <!-- Notifications -->
+    <string name="notification_preparing">جارٍ تحضير التنزيل…</string>
+    <string name="notification_completed">اكتمل التنزيل</string>
+    <string name="notification_failed">فشل التنزيل</string>
+    <string name="notification_service_running">خدمة التنزيل قيد التشغيل</string>
+    <string name="notification_tasks_count">\u0020· %1$d مهمة</string>
+    <string name="notification_active">%1$d نشط · %2$s</string>
+    <string name="notification_queued">%1$d مهمة في قائمة الانتظار</string>
+    <string name="notification_pause_all">إيقاف الكل مؤقتًا</string>
+    <string name="notification_title">تنزيلات Tug</string>
+    <string name="channel_progress">تقدم التنزيل</string>
+    <string name="channel_progress_desc">إشعار مستمر بتقدم التنزيلات</string>
+    <string name="channel_done">نتائج التنزيل</string>
+    <string name="channel_done_desc">إشعارات للتنزيلات المكتملة أو الفاشلة</string>
+
+    <!-- File operations -->
+    <string name="share_file">مشاركة الملف</string>
+    <string name="clipboard_download_link">رابط التنزيل</string>
+
+    <!-- Publish errors -->
+    <string name="publish_source_missing">لم يتم العثور على الملف المجهز: %1$s</string>
+    <string name="publish_dir_missing">لم يتم العثور على المجلد المجهز: %1$s</string>
+    <string name="publish_dir_empty">المجلد المجهز فارغ: %1$s</string>
+    <string name="publish_create_entry_failed">فشل إنشاء إدخال الملف: %1$s</string>
+    <string name="publish_open_output_failed">فشل فتح دفق الإخراج: %1$s</string>
+    <string name="publish_dir_failed">فشل نشر المجلد</string>
+    <string name="publish_save_dir_failed">فشل حفظ المجلد في التنزيلات: %1$s</string>
+    <string name="publish_create_dir_failed">فشل إنشاء مجلد التنزيل: %1$s</string>
+    <string name="publish_move_dir_failed">فشل نقل المجلد: %1$s</string>
+    <string name="publish_create_entry_generic_failed">فشل إنشاء إدخال الملف في التنزيلات</string>
+    <string name="publish_open_output_generic_failed">فشل فتح دفق ملف الإخراج</string>
+    <string name="publish_save_failed">فشل الحفظ في التنزيلات: %1$s</string>
+    <string name="publish_move_failed">فشل النقل إلى التنزيلات: %1$s</string>
+
+    <!-- Language -->
+    <string name="settings_language">اللغة</string>
+    <string name="language_system">افتراضي النظام</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_zh_tw">繁體中文</string>
+    <string name="language_en">English</string>
+    <string name="language_es">Español</string>
+    <string name="language_hi">हिन्दी</string>
+    <string name="language_ar">العربية</string>
+    <string name="language_dialog_title">اختيار اللغة</string>
+</resources>

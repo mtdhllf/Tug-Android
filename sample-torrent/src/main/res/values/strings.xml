@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Tug BT Demo</string>
+    <string name="demo_title">Tug BT Demo</string>
+    <string name="demo_stats">libtorrent4j · %1$d tasks · %2$d active · %3$d completed</string>
+    <string name="live_speed">Live speed %1$s</string>
+    <string name="common_settings">Common settings</string>
+    <string name="max_concurrent">Max concurrent downloads</string>
+    <string name="limit_hint">Global limit (KiB/s, blank = unlimited)</string>
+    <string name="settings_applied">Settings applied</string>
+    <string name="apply_settings">Apply settings</string>
+    <string name="save_dir">Save directory: %1$s</string>
+    <string name="new_bt_task">New BT task</string>
+    <string name="torrent_url">Magnet link / .torrent URL</string>
+    <string name="add_failed">Failed to add task</string>
+    <string name="choose_torrent">Choose local .torrent file</string>
+    <string name="read_torrent_failed">Failed to read .torrent file</string>
+    <string name="start_download">Start download</string>
+    <string name="pause_all">Pause all</string>
+    <string name="resume_all">Resume all</string>
+    <string name="download_list">Downloads</string>
+    <string name="empty_tasks">No tasks. Enter a magnet link or choose a .torrent file to start.</string>
+    <string name="bt_note">BitTorrent downloads only; no seeding. Peer availability depends on tracker/DHT.</string>
+    <string name="delete_task">Delete task</string>
+    <string name="delete_files">Also delete downloaded files</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="state_queued">Queued</string>
+    <string name="state_fetching">Fetching metadata</string>
+    <string name="state_downloading">Downloading</string>
+    <string name="state_paused">Paused</string>
+    <string name="state_seeding">Seeding</string>
+    <string name="state_completed">Completed</string>
+    <string name="state_failed">Failed</string>
+</resources>

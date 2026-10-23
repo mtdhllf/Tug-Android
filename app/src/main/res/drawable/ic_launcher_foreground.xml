@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.8"
+        android:scaleY="0.8">
+        <!-- 下载箭头 -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M54,31 L54,56"
+            android:strokeColor="#FFFBFF"
+            android:strokeLineCap="round"
+            android:strokeWidth="7" />
+        <path
+            android:fillColor="#FFFBFF"
+            android:pathData="M41,52 L67,52 L54,72 Z" />
+        <!-- 托盘 -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M35,72 L35,81 L73,81 L73,72"
+            android:strokeColor="#FFFBFF"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:strokeWidth="5.5" />
+        <!-- 圆角端点 -->
+        <path
+            android:fillColor="#FFFBFF"
+            android:pathData="M32.25,72 a2.75,2.75 0 1,0 5.5,0 a2.75,2.75 0 1,0 -5.5,0" />
+        <path
+            android:fillColor="#FFFBFF"
+            android:pathData="M70.25,72 a2.75,2.75 0 1,0 5.5,0 a2.75,2.75 0 1,0 -5.5,0" />
+    </group>
+</vector>

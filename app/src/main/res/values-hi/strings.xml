@@ -1,0 +1,255 @@
+<resources>
+    <string name="app_name">Tug</string>
+    <string name="nav_home">होम</string>
+    <string name="nav_tasks">कार्य</string>
+    <string name="nav_settings">सेटिंग्स</string>
+    <string name="fab_new">नया</string>
+
+    <!-- Common -->
+    <string name="common_cancel">रद्द करें</string>
+    <string name="common_delete">हटाएँ</string>
+    <string name="common_back">वापस</string>
+    <string name="common_open_file">फ़ाइल खोलें</string>
+    <string name="common_share_file">फ़ाइल साझा करें</string>
+    <string name="common_copy_link">लिंक कॉपी करें</string>
+    <string name="common_pause">पॉज़ करें</string>
+    <string name="common_resume">जारी रखें</string>
+    <string name="common_start_download">डाउनलोड शुरू करें</string>
+    <string name="common_all">सभी</string>
+    <string name="common_unknown">अज्ञात</string>
+
+    <string name="snackbar_added">डाउनलोड कतार में जोड़ा गया</string>
+    <string name="snackbar_deleted">हटा दिया गया</string>
+    <string name="snackbar_link_copied">लिंक कॉपी हो गया</string>
+    <string name="snackbar_paused_selected">चयनित कार्य पॉज़ किए गए</string>
+    <string name="snackbar_resumed_selected">चयनित कार्य जारी किए गए</string>
+
+    <string name="error_create_task">कार्य बनाने में विफल</string>
+    <string name="error_read_torrent">.torrent फ़ाइल पढ़ने में विफल</string>
+    <string name="error_parse_torrent">टोरेंट पार्स करने में विफल</string>
+    <string name="error_need_url">डाउनलोड URL दर्ज करें</string>
+    <string name="error_need_url_or_torrent">डाउनलोड URL दर्ज करें या .torrent फ़ाइल चुनें</string>
+    <string name="error_unsupported_url">केवल HTTP/HTTPS या magnet लिंक समर्थित हैं</string>
+
+    <!-- Task states -->
+    <string name="state_queued">कतार में</string>
+    <string name="state_fetching">मेटाडेटा प्राप्त हो रहा है</string>
+    <string name="state_downloading">डाउनलोड हो रहा है</string>
+    <string name="state_paused">पॉज़ किया गया</string>
+    <string name="state_seeding">सीडिंग</string>
+    <string name="state_completed">पूर्ण</string>
+    <string name="state_failed">विफल</string>
+
+    <!-- Task sort / filter -->
+    <string name="sort_recent">हाल के</string>
+    <string name="sort_speed">गति</string>
+    <string name="sort_name">नाम</string>
+    <string name="filter_all">सभी</string>
+    <string name="filter_downloading">डाउनलोड हो रहे हैं</string>
+    <string name="filter_completed">पूर्ण</string>
+    <string name="filter_failed">विफल</string>
+
+    <!-- Task components -->
+    <string name="remaining">शेष %1$s</string>
+    <string name="content_open_file">फ़ाइल खोलें</string>
+    <string name="content_pause_resume">पॉज़ करें या जारी रखें</string>
+    <string name="delete_task_title">कार्य हटाएँ</string>
+    <string name="delete_task_message">“%1$s” हटाएँ?</string>
+    <string name="delete_files_checkbox">डाउनलोड की गई फ़ाइलें भी हटाएँ</string>
+
+    <!-- Home -->
+    <string name="home_subtitle">तेज़ डाउनलोड · जारी रखने की सुविधा</string>
+    <string name="stat_speed">लाइव गति</string>
+    <string name="stat_active">सक्रिय</string>
+    <string name="stat_completed">पूर्ण</string>
+    <string name="quick_add">त्वरित जोड़ें</string>
+    <string name="more_options">अधिक विकल्प</string>
+    <string name="quick_add_placeholder">HTTP/HTTPS URL पेस्ट करें</string>
+    <string name="active_title">सक्रिय</string>
+    <string name="empty_active_title">कोई सक्रिय डाउनलोड नहीं</string>
+    <string name="empty_active_subtitle">डाउनलोड शुरू करने के लिए लिंक पेस्ट करें</string>
+    <string name="recent_completed">हाल ही में पूर्ण</string>
+    <string name="empty_completed_title">अभी तक कोई पूर्ण डाउनलोड नहीं</string>
+    <string name="empty_completed_subtitle">पूर्ण डाउनलोड यहाँ दिखाई देंगे</string>
+
+    <!-- Task list -->
+    <string name="tasks_title">सभी कार्य</string>
+    <string name="content_sort">क्रमबद्ध करें</string>
+    <string name="search_placeholder">नाम, URL या त्रुटि खोजें</string>
+    <string name="empty_no_match">कोई मेल खाता कार्य नहीं</string>
+    <string name="empty_category">इस श्रेणी में कोई कार्य नहीं</string>
+    <string name="empty_tasks_subtitle">डाउनलोड बनाने के लिए + टैप करें</string>
+    <string name="empty_filter_subtitle">कोई दूसरा फ़िल्टर आज़माएँ</string>
+    <string name="new_task">नया कार्य</string>
+    <string name="delete_selected_tasks">%1$d कार्य हटाएँ</string>
+    <string name="selected_count">%1$d चयनित</string>
+    <string name="content_exit_selection">चयन से बाहर निकलें</string>
+    <string name="content_select_all">सभी चुनें</string>
+    <string name="content_pause_selected">चयनित पॉज़ करें</string>
+    <string name="content_resume_selected">चयनित जारी करें</string>
+    <string name="content_delete_selected">चयनित हटाएँ</string>
+
+    <!-- Add task -->
+    <string name="add_title">नया डाउनलोड</string>
+    <string name="url_label">डाउनलोड URL</string>
+    <string name="url_placeholder">https://example.com/file.zip</string>
+    <string name="selected_torrent_file">टोरेंट चयनित: %1$s</string>
+    <string name="url_support">HTTP/HTTPS, magnet लिंक या स्थानीय .torrent फ़ाइल समर्थित है</string>
+    <string name="choose_torrent">.torrent फ़ाइल चुनें</string>
+    <string name="reselect_torrent">दूसरी .torrent फ़ाइल चुनें</string>
+    <string name="file_name_label">फ़ाइल नाम (वैकल्पिक)</string>
+    <string name="torrent_no_filename">.torrent फ़ाइलों के लिए कस्टम फ़ाइल नाम समर्थित नहीं हैं</string>
+    <string name="file_name_hint">सर्वर द्वारा दिए गए नाम का उपयोग करने के लिए खाली छोड़ें</string>
+    <string name="connections">कनेक्शन</string>
+    <string name="connections_subtitle">एक साथ चलने वाले सेगमेंट कनेक्शन</string>
+    <string name="content_dec_connections">कनेक्शन घटाएँ</string>
+    <string name="content_inc_connections">कनेक्शन बढ़ाएँ</string>
+    <string name="parsing">पार्स हो रहा है…</string>
+    <string name="processing">प्रोसेस हो रहा है…</string>
+    <string name="choose_files_title">फ़ाइलें चुनें (%1$d)</string>
+
+    <!-- Task detail -->
+    <string name="detail_title">कार्य विवरण</string>
+    <string name="task_missing_title">कार्य नहीं मिला</string>
+    <string name="task_missing_subtitle">हो सकता है कि इसे हटा दिया गया हो</string>
+    <string name="speed_remaining">गति %1$s · शेष %2$s</string>
+    <string name="info_link">लिंक</string>
+    <string name="info_save_location">सहेजने का स्थान</string>
+    <string name="info_task_type">कार्य प्रकार</string>
+    <string name="info_peers">Peers</string>
+    <string name="info_uploaded">अपलोड किया गया</string>
+    <string name="info_connections">कनेक्शन</string>
+    <string name="files_count">फ़ाइलें (%1$d)</string>
+    <string name="peers_count">Peers (%1$d)</string>
+    <string name="trackers_count">Trackers (%1$d)</string>
+    <string name="no_peers">कोई Peers नहीं</string>
+    <string name="no_trackers">कोई Trackers नहीं</string>
+    <string name="task_type_http">HTTP/HTTPS</string>
+    <string name="task_type_torrent">BitTorrent</string>
+
+    <!-- Settings overview -->
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_download_network">डाउनलोड और नेटवर्क</string>
+    <string name="settings_download">डाउनलोड</string>
+    <string name="settings_download_summary">समवर्ती %1$d · कनेक्शन %2$d · सीमा %3$s</string>
+    <string name="settings_network">नेटवर्क</string>
+    <string name="settings_network_wifi_only">केवल Wi-Fi</string>
+    <string name="settings_network_mobile">मोबाइल डेटा की अनुमति</string>
+    <string name="settings_notifications">सूचनाएँ</string>
+    <string name="settings_notifications_on">सूचनाएँ सक्षम</string>
+    <string name="settings_notifications_off">सूचनाएँ बंद, सक्षम करने के लिए टैप करें</string>
+    <string name="settings_app">ऐप</string>
+    <string name="settings_appearance">रूप-रंग</string>
+    <string name="settings_appearance_summary">थीम: %1$s%2$s</string>
+    <string name="settings_dynamic_color_suffix">\u0020· गतिशील रंग</string>
+    <string name="settings_background">बैकग्राउंड और बैटरी</string>
+    <string name="settings_background_summary">बैकग्राउंड में चलते रहने और बैटरी की रणनीति</string>
+    <string name="settings_about">ऐप के बारे में और निदान</string>
+    <string name="settings_about_summary">संस्करण, इंजन, संग्रहण स्थान</string>
+    <string name="settings_save_location">सहेजने का स्थान: %1$s</string>
+
+    <!-- Settings: download -->
+    <string name="settings_concurrency">समवर्तीता और कनेक्शन</string>
+    <string name="settings_max_tasks">अधिकतम समवर्ती डाउनलोड</string>
+    <string name="settings_max_tasks_subtitle">1–16</string>
+    <string name="settings_connections">प्रति कार्य कनेक्शन</string>
+    <string name="settings_connections_subtitle">1–32, नए कार्यों पर लागू</string>
+    <string name="settings_bt_choose">BT डाउनलोड से पहले फ़ाइलें चुनें</string>
+    <string name="settings_bt_choose_subtitle">शुरू करने से पहले टोरेंट पार्स करें और फ़ाइलें चुनें; डिफ़ॉल्ट रूप से बंद, सभी फ़ाइलें डाउनलोड होती हैं</string>
+    <string name="settings_global_limit">वैश्विक गति सीमा</string>
+    <string name="settings_global_limit_desc">साझा डाउनलोड बैंडविड्थ सीमा</string>
+    <string name="limit_unlimited">असीमित</string>
+    <string name="limit_1mb">1 MB/s</string>
+    <string name="limit_2mb">2 MB/s</string>
+    <string name="limit_5mb">5 MB/s</string>
+    <string name="settings_save_location_title">सहेजने का स्थान</string>
+    <string name="settings_save_desc">डाउनलोड ऐप-निजी स्टेजिंग में लिखे जाते हैं और पूरा होने पर यहाँ प्रकाशित किए जाते हैं।</string>
+
+    <!-- Settings: network -->
+    <string name="settings_wifi_only">केवल Wi-Fi पर डाउनलोड करें</string>
+    <string name="settings_wifi_only_subtitle">मोबाइल डेटा पर पॉज़ करें और Wi-Fi पर जारी रखें</string>
+    <string name="settings_network_policy">ऑफ़लाइन होने या शर्तें पूरी न होने पर कार्य स्वतः पॉज़ हो जाते हैं; केवल नीति के कारण पॉज़ हुए कार्य ही जारी होते हैं।</string>
+
+    <!-- Settings: notifications -->
+    <string name="settings_notifications_enabled">सूचनाएँ सक्षम: बैकग्राउंड प्रगति और पूर्णता अलर्ट दिखाई देते हैं।</string>
+    <string name="settings_notifications_disabled">सूचनाएँ बंद: बैकग्राउंड प्रगति और पूर्णता अलर्ट छिपे रहते हैं।</string>
+    <string name="settings_open_notification_settings">सूचना सेटिंग्स खोलें</string>
+    <string name="settings_enable_notifications">सूचनाएँ सक्षम करें</string>
+
+    <!-- Settings: appearance -->
+    <string name="settings_theme">थीम</string>
+    <string name="theme_system">सिस्टम डिफ़ॉल्ट</string>
+    <string name="theme_light">लाइट</string>
+    <string name="theme_dark">डार्क</string>
+    <string name="settings_dynamic_color">गतिशील रंग</string>
+    <string name="settings_dynamic_color_subtitle">सिस्टम वॉलपेपर के रंग उपयोग करें (Android 12+)</string>
+    <string name="settings_dynamic_color_unsupported">इस सिस्टम पर समर्थित नहीं; ब्रांड रंगों का उपयोग किया जा रहा है</string>
+
+    <!-- Settings: background -->
+    <string name="settings_background_title">बैकग्राउंड डाउनलोड</string>
+    <string name="settings_background_desc">फ़ोरग्राउंड सेवा और CPU वेक लॉक डाउनलोड चालू रखते हैं; बैटरी ऑप्टिमाइज़ेशन फिर भी लंबे बैकग्राउंड कार्यों को सीमित कर सकता है।</string>
+    <string name="settings_open_battery">बैटरी ऑप्टिमाइज़ेशन सेटिंग्स खोलें</string>
+    <string name="settings_open_app">ऐप सेटिंग्स खोलें</string>
+
+    <!-- Settings: about -->
+    <string name="settings_version">संस्करण</string>
+    <string name="settings_version_desc">Kotlin · JDK HTTP · SQLite · libtorrent4j</string>
+    <string name="settings_system">सिस्टम</string>
+    <string name="settings_android_version">Android %1$s (API %2$d)</string>
+    <string name="settings_abi">ABI: %1$s</string>
+    <string name="settings_storage">संग्रहण</string>
+    <string name="settings_download_dir">डाउनलोड निर्देशिका: %1$s</string>
+    <string name="settings_staging_dir">स्टेजिंग निर्देशिका: %1$s</string>
+    <string name="settings_engine">इंजन</string>
+    <string name="settings_http_engine">HTTP: खंडित डाउनलोड / फिर से शुरू / ऑफ़लाइन रिकवरी / दर सीमा</string>
+    <string name="settings_bt_engine">BT: libtorrent4j 2.1.0-39 (magnet / .torrent)</string>
+    <string name="settings_open_source">ओपन सोर्स</string>
+    <string name="settings_open_source_desc">Kotlin · kotlinx-coroutines · kotlinx-serialization · Jetpack Compose · Material 3 · libtorrent4j</string>
+    <string name="content_dec">घटाएँ</string>
+    <string name="content_inc">बढ़ाएँ</string>
+
+    <!-- Notifications -->
+    <string name="notification_preparing">डाउनलोड तैयार हो रहा है…</string>
+    <string name="notification_completed">डाउनलोड पूर्ण</string>
+    <string name="notification_failed">डाउनलोड विफल</string>
+    <string name="notification_service_running">डाउनलोड सेवा चल रही है</string>
+    <string name="notification_tasks_count">\u0020· %1$d कार्य</string>
+    <string name="notification_active">%1$d सक्रिय · %2$s</string>
+    <string name="notification_queued">%1$d कार्य कतार में</string>
+    <string name="notification_pause_all">सभी पॉज़ करें</string>
+    <string name="notification_title">Tug डाउनलोड</string>
+    <string name="channel_progress">डाउनलोड प्रगति</string>
+    <string name="channel_progress_desc">डाउनलोड के लिए चालू प्रगति सूचना</string>
+    <string name="channel_done">डाउनलोड परिणाम</string>
+    <string name="channel_done_desc">पूर्ण या विफल डाउनलोड के लिए सूचनाएँ</string>
+
+    <!-- File operations -->
+    <string name="share_file">फ़ाइल साझा करें</string>
+    <string name="clipboard_download_link">डाउनलोड लिंक</string>
+
+    <!-- Publish errors -->
+    <string name="publish_source_missing">स्टेज की गई फ़ाइल नहीं मिली: %1$s</string>
+    <string name="publish_dir_missing">स्टेज की गई निर्देशिका नहीं मिली: %1$s</string>
+    <string name="publish_dir_empty">स्टेज की गई निर्देशिका खाली है: %1$s</string>
+    <string name="publish_create_entry_failed">फ़ाइल प्रविष्टि बनाने में विफल: %1$s</string>
+    <string name="publish_open_output_failed">आउटपुट स्ट्रीम खोलने में विफल: %1$s</string>
+    <string name="publish_dir_failed">निर्देशिका प्रकाशित करने में विफल</string>
+    <string name="publish_save_dir_failed">निर्देशिका को Downloads में सहेजने में विफल: %1$s</string>
+    <string name="publish_create_dir_failed">डाउनलोड निर्देशिका बनाने में विफल: %1$s</string>
+    <string name="publish_move_dir_failed">निर्देशिका स्थानांतरित करने में विफल: %1$s</string>
+    <string name="publish_create_entry_generic_failed">Downloads में फ़ाइल प्रविष्टि बनाने में विफल</string>
+    <string name="publish_open_output_generic_failed">आउटपुट फ़ाइल स्ट्रीम खोलने में विफल</string>
+    <string name="publish_save_failed">Downloads में सहेजने में विफल: %1$s</string>
+    <string name="publish_move_failed">Downloads में स्थानांतरित करने में विफल: %1$s</string>
+
+    <!-- Language -->
+    <string name="settings_language">भाषा</string>
+    <string name="language_system">सिस्टम डिफ़ॉल्ट</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_zh_tw">繁體中文</string>
+    <string name="language_en">English</string>
+    <string name="language_es">Español</string>
+    <string name="language_hi">हिन्दी</string>
+    <string name="language_ar">العربية</string>
+    <string name="language_dialog_title">भाषा चुनें</string>
+</resources>

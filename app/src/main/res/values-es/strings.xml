@@ -1,0 +1,255 @@
+<resources>
+    <string name="app_name">Tug</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_tasks">Tareas</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="fab_new">Nuevo</string>
+
+    <!-- Common -->
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_delete">Eliminar</string>
+    <string name="common_back">Atrás</string>
+    <string name="common_open_file">Abrir archivo</string>
+    <string name="common_share_file">Compartir archivo</string>
+    <string name="common_copy_link">Copiar enlace</string>
+    <string name="common_pause">Pausar</string>
+    <string name="common_resume">Reanudar</string>
+    <string name="common_start_download">Iniciar descarga</string>
+    <string name="common_all">Todos</string>
+    <string name="common_unknown">Desconocido</string>
+
+    <string name="snackbar_added">Añadido a la cola de descargas</string>
+    <string name="snackbar_deleted">Eliminado</string>
+    <string name="snackbar_link_copied">Enlace copiado</string>
+    <string name="snackbar_paused_selected">Tareas seleccionadas pausadas</string>
+    <string name="snackbar_resumed_selected">Tareas seleccionadas reanudadas</string>
+
+    <string name="error_create_task">No se pudo crear la tarea</string>
+    <string name="error_read_torrent">No se pudo leer el archivo .torrent</string>
+    <string name="error_parse_torrent">No se pudo analizar el torrent</string>
+    <string name="error_need_url">Introduce una URL de descarga</string>
+    <string name="error_need_url_or_torrent">Introduce una URL de descarga o elige un archivo .torrent</string>
+    <string name="error_unsupported_url">Solo se admiten enlaces HTTP/HTTPS o magnet</string>
+
+    <!-- Task states -->
+    <string name="state_queued">En cola</string>
+    <string name="state_fetching">Obteniendo metadatos</string>
+    <string name="state_downloading">Descargando</string>
+    <string name="state_paused">En pausa</string>
+    <string name="state_seeding">Sembrando</string>
+    <string name="state_completed">Completada</string>
+    <string name="state_failed">Fallida</string>
+
+    <!-- Task sort / filter -->
+    <string name="sort_recent">Recientes</string>
+    <string name="sort_speed">Velocidad</string>
+    <string name="sort_name">Nombre</string>
+    <string name="filter_all">Todas</string>
+    <string name="filter_downloading">Descargando</string>
+    <string name="filter_completed">Completadas</string>
+    <string name="filter_failed">Fallidas</string>
+
+    <!-- Task components -->
+    <string name="remaining">Restante %1$s</string>
+    <string name="content_open_file">Abrir archivo</string>
+    <string name="content_pause_resume">Pausar o reanudar</string>
+    <string name="delete_task_title">Eliminar tarea</string>
+    <string name="delete_task_message">¿Eliminar “%1$s”?</string>
+    <string name="delete_files_checkbox">Eliminar también los archivos descargados</string>
+
+    <!-- Home -->
+    <string name="home_subtitle">Descargas rápidas · Compatible con reanudación</string>
+    <string name="stat_speed">Velocidad actual</string>
+    <string name="stat_active">Activas</string>
+    <string name="stat_completed">Completadas</string>
+    <string name="quick_add">Añadir rápido</string>
+    <string name="more_options">Más opciones</string>
+    <string name="quick_add_placeholder">Pega una URL HTTP/HTTPS</string>
+    <string name="active_title">Activas</string>
+    <string name="empty_active_title">No hay descargas activas</string>
+    <string name="empty_active_subtitle">Pega un enlace para empezar a descargar</string>
+    <string name="recent_completed">Completadas recientemente</string>
+    <string name="empty_completed_title">Aún no hay descargas completadas</string>
+    <string name="empty_completed_subtitle">Las descargas completadas aparecerán aquí</string>
+
+    <!-- Task list -->
+    <string name="tasks_title">Todas las tareas</string>
+    <string name="content_sort">Ordenar</string>
+    <string name="search_placeholder">Buscar nombre, URL o error</string>
+    <string name="empty_no_match">No hay tareas coincidentes</string>
+    <string name="empty_category">No hay tareas en esta categoría</string>
+    <string name="empty_tasks_subtitle">Toca + para crear una descarga</string>
+    <string name="empty_filter_subtitle">Prueba otro filtro</string>
+    <string name="new_task">Nueva tarea</string>
+    <string name="delete_selected_tasks">Eliminar %1$d tareas</string>
+    <string name="selected_count">%1$d seleccionadas</string>
+    <string name="content_exit_selection">Salir de la selección</string>
+    <string name="content_select_all">Seleccionar todo</string>
+    <string name="content_pause_selected">Pausar seleccionadas</string>
+    <string name="content_resume_selected">Reanudar seleccionadas</string>
+    <string name="content_delete_selected">Eliminar seleccionadas</string>
+
+    <!-- Add task -->
+    <string name="add_title">Nueva descarga</string>
+    <string name="url_label">URL de descarga</string>
+    <string name="url_placeholder">https://example.com/file.zip</string>
+    <string name="selected_torrent_file">Torrent seleccionado: %1$s</string>
+    <string name="url_support">Admite HTTP/HTTPS, enlaces magnet o un archivo .torrent local</string>
+    <string name="choose_torrent">Elegir archivo .torrent</string>
+    <string name="reselect_torrent">Elegir otro archivo .torrent</string>
+    <string name="file_name_label">Nombre del archivo (opcional)</string>
+    <string name="torrent_no_filename">No se admiten nombres personalizados para archivos .torrent</string>
+    <string name="file_name_hint">Déjalo en blanco para usar el nombre del servidor</string>
+    <string name="connections">Conexiones</string>
+    <string name="connections_subtitle">Conexiones simultáneas por segmento</string>
+    <string name="content_dec_connections">Reducir conexiones</string>
+    <string name="content_inc_connections">Aumentar conexiones</string>
+    <string name="parsing">Analizando…</string>
+    <string name="processing">Procesando…</string>
+    <string name="choose_files_title">Elegir archivos (%1$d)</string>
+
+    <!-- Task detail -->
+    <string name="detail_title">Detalles de la tarea</string>
+    <string name="task_missing_title">Tarea no encontrada</string>
+    <string name="task_missing_subtitle">Puede que se haya eliminado</string>
+    <string name="speed_remaining">Velocidad %1$s · Restante %2$s</string>
+    <string name="info_link">Enlace</string>
+    <string name="info_save_location">Ubicación de guardado</string>
+    <string name="info_task_type">Tipo de tarea</string>
+    <string name="info_peers">Peers</string>
+    <string name="info_uploaded">Subido</string>
+    <string name="info_connections">Conexiones</string>
+    <string name="files_count">Archivos (%1$d)</string>
+    <string name="peers_count">Peers (%1$d)</string>
+    <string name="trackers_count">Trackers (%1$d)</string>
+    <string name="no_peers">No hay peers</string>
+    <string name="no_trackers">No hay trackers</string>
+    <string name="task_type_http">HTTP/HTTPS</string>
+    <string name="task_type_torrent">BitTorrent</string>
+
+    <!-- Settings overview -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_download_network">Descargas y red</string>
+    <string name="settings_download">Descargas</string>
+    <string name="settings_download_summary">Simultaneidad %1$d · Conexiones %2$d · Límite %3$s</string>
+    <string name="settings_network">Red</string>
+    <string name="settings_network_wifi_only">Solo Wi-Fi</string>
+    <string name="settings_network_mobile">Datos móviles permitidos</string>
+    <string name="settings_notifications">Notificaciones</string>
+    <string name="settings_notifications_on">Notificaciones activadas</string>
+    <string name="settings_notifications_off">Notificaciones desactivadas, toca para activar</string>
+    <string name="settings_app">Aplicación</string>
+    <string name="settings_appearance">Apariencia</string>
+    <string name="settings_appearance_summary">Tema: %1$s%2$s</string>
+    <string name="settings_dynamic_color_suffix">\u0020· Color dinámico</string>
+    <string name="settings_background">Segundo plano y batería</string>
+    <string name="settings_background_summary">Estrategia de mantenimiento y batería</string>
+    <string name="settings_about">Acerca de y diagnóstico</string>
+    <string name="settings_about_summary">Versión, motores, ubicación de almacenamiento</string>
+    <string name="settings_save_location">Ubicación de guardado: %1$s</string>
+
+    <!-- Settings: download -->
+    <string name="settings_concurrency">Simultaneidad y conexiones</string>
+    <string name="settings_max_tasks">Máximo de descargas simultáneas</string>
+    <string name="settings_max_tasks_subtitle">1–16</string>
+    <string name="settings_connections">Conexiones por tarea</string>
+    <string name="settings_connections_subtitle">1–32, se aplica a tareas nuevas</string>
+    <string name="settings_bt_choose">Elegir archivos antes de la descarga BT</string>
+    <string name="settings_bt_choose_subtitle">Analiza los torrents y elige archivos antes de empezar; desactivado de forma predeterminada, descarga todos los archivos</string>
+    <string name="settings_global_limit">Límite de velocidad global</string>
+    <string name="settings_global_limit_desc">Límite de ancho de banda compartido para descargas</string>
+    <string name="limit_unlimited">Ilimitado</string>
+    <string name="limit_1mb">1 MB/s</string>
+    <string name="limit_2mb">2 MB/s</string>
+    <string name="limit_5mb">5 MB/s</string>
+    <string name="settings_save_location_title">Ubicación de guardado</string>
+    <string name="settings_save_desc">Las descargas se escriben en un área de preparación privada de la app y se publican aquí al completarse.</string>
+
+    <!-- Settings: network -->
+    <string name="settings_wifi_only">Descargas solo por Wi-Fi</string>
+    <string name="settings_wifi_only_subtitle">Pausar con datos móviles y reanudar con Wi-Fi</string>
+    <string name="settings_network_policy">Las tareas se pausan automáticamente cuando no hay conexión o no se cumplen las condiciones; solo se reanudan las tareas pausadas por la política.</string>
+
+    <!-- Settings: notifications -->
+    <string name="settings_notifications_enabled">Notificaciones activadas: se muestran el progreso en segundo plano y los avisos de finalización.</string>
+    <string name="settings_notifications_disabled">Notificaciones desactivadas: el progreso en segundo plano y los avisos de finalización están ocultos.</string>
+    <string name="settings_open_notification_settings">Abrir ajustes de notificaciones</string>
+    <string name="settings_enable_notifications">Activar notificaciones</string>
+
+    <!-- Settings: appearance -->
+    <string name="settings_theme">Tema</string>
+    <string name="theme_system">Predeterminado del sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="settings_dynamic_color">Color dinámico</string>
+    <string name="settings_dynamic_color_subtitle">Usar los colores del fondo de pantalla del sistema (Android 12+)</string>
+    <string name="settings_dynamic_color_unsupported">No compatible con este sistema; se usan los colores de la marca</string>
+
+    <!-- Settings: background -->
+    <string name="settings_background_title">Descargas en segundo plano</string>
+    <string name="settings_background_desc">Un servicio en primer plano y un bloqueo de activación de CPU mantienen las descargas en marcha; la optimización de batería puede seguir limitando las tareas largas en segundo plano.</string>
+    <string name="settings_open_battery">Abrir ajustes de optimización de batería</string>
+    <string name="settings_open_app">Abrir ajustes de la app</string>
+
+    <!-- Settings: about -->
+    <string name="settings_version">Versión</string>
+    <string name="settings_version_desc">Kotlin · JDK HTTP · SQLite · libtorrent4j</string>
+    <string name="settings_system">Sistema</string>
+    <string name="settings_android_version">Android %1$s (API %2$d)</string>
+    <string name="settings_abi">ABI: %1$s</string>
+    <string name="settings_storage">Almacenamiento</string>
+    <string name="settings_download_dir">Directorio de descargas: %1$s</string>
+    <string name="settings_staging_dir">Directorio de preparación: %1$s</string>
+    <string name="settings_engine">Motores</string>
+    <string name="settings_http_engine">HTTP: descargas segmentadas / reanudación / recuperación sin conexión / límite de velocidad</string>
+    <string name="settings_bt_engine">BT: libtorrent4j 2.1.0-39 (magnet / .torrent)</string>
+    <string name="settings_open_source">Código abierto</string>
+    <string name="settings_open_source_desc">Kotlin · kotlinx-coroutines · kotlinx-serialization · Jetpack Compose · Material 3 · libtorrent4j</string>
+    <string name="content_dec">Reducir</string>
+    <string name="content_inc">Aumentar</string>
+
+    <!-- Notifications -->
+    <string name="notification_preparing">Preparando la descarga…</string>
+    <string name="notification_completed">Descarga completada</string>
+    <string name="notification_failed">Error en la descarga</string>
+    <string name="notification_service_running">Servicio de descargas en ejecución</string>
+    <string name="notification_tasks_count">\u0020· %1$d tareas</string>
+    <string name="notification_active">%1$d activas · %2$s</string>
+    <string name="notification_queued">%1$d tareas en cola</string>
+    <string name="notification_pause_all">Pausar todo</string>
+    <string name="notification_title">Descargas de Tug</string>
+    <string name="channel_progress">Progreso de descargas</string>
+    <string name="channel_progress_desc">Notificación de progreso continuo para las descargas</string>
+    <string name="channel_done">Resultados de descargas</string>
+    <string name="channel_done_desc">Notificaciones de descargas completadas o fallidas</string>
+
+    <!-- File operations -->
+    <string name="share_file">Compartir archivo</string>
+    <string name="clipboard_download_link">Enlace de descarga</string>
+
+    <!-- Publish errors -->
+    <string name="publish_source_missing">Archivo de preparación no encontrado: %1$s</string>
+    <string name="publish_dir_missing">Directorio de preparación no encontrado: %1$s</string>
+    <string name="publish_dir_empty">El directorio de preparación está vacío: %1$s</string>
+    <string name="publish_create_entry_failed">No se pudo crear la entrada de archivo: %1$s</string>
+    <string name="publish_open_output_failed">No se pudo abrir el flujo de salida: %1$s</string>
+    <string name="publish_dir_failed">No se pudo publicar el directorio</string>
+    <string name="publish_save_dir_failed">No se pudo guardar el directorio en Descargas: %1$s</string>
+    <string name="publish_create_dir_failed">No se pudo crear el directorio de descargas: %1$s</string>
+    <string name="publish_move_dir_failed">No se pudo mover el directorio: %1$s</string>
+    <string name="publish_create_entry_generic_failed">No se pudo crear la entrada de archivo en Descargas</string>
+    <string name="publish_open_output_generic_failed">No se pudo abrir el flujo del archivo de salida</string>
+    <string name="publish_save_failed">No se pudo guardar en Descargas: %1$s</string>
+    <string name="publish_move_failed">No se pudo mover a Descargas: %1$s</string>
+
+    <!-- Language -->
+    <string name="settings_language">Idioma</string>
+    <string name="language_system">Predeterminado del sistema</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_zh_tw">繁體中文</string>
+    <string name="language_en">English</string>
+    <string name="language_es">Español</string>
+    <string name="language_hi">हिन्दी</string>
+    <string name="language_ar">العربية</string>
+    <string name="language_dialog_title">Elegir idioma</string>
+</resources>
