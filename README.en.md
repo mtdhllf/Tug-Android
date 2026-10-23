@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="public/icon-512.png" width="40" alt="Tug Android application icon"> Tug Android
+  <img src="public/icon-512.png" width="40" alt="Tug-Android application icon"> Tug-Android
 </h1>
 
 <p align="center">Multi-connection HTTP/HTTPS and BitTorrent downloader · Reusable Kotlin libraries</p>
@@ -18,7 +18,7 @@
 
 ---
 
-Tug Android is the Android version of [Tug](https://github.com/mtdhllf/Tug-Desktop). The desktop (Rust) version focuses on BitTorrent and Windows integration. The Android app focuses on **multi-connection HTTP/HTTPS downloads, resume support, and background downloads**, while exposing its download core as lightweight Kotlin libraries.
+Tug-Android is the Android version of [Tug](https://github.com/mtdhllf/Tug-Desktop). The desktop (Rust) version focuses on BitTorrent and Windows integration. The Android app focuses on **multi-connection HTTP/HTTPS downloads, resume support, and background downloads**, while exposing its download core as lightweight Kotlin libraries.
 
 ### Highlights
 

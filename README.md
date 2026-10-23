@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="public/icon-512.png" width="40" alt="Tug Android application icon"> Tug Android
+  <img src="public/icon-512.png" width="40" alt="Tug-Android application icon"> Tug-Android
 </h1>
 
 <p align="center">多连接 HTTP/HTTPS 与 BitTorrent 下载器 · 可复用 Kotlin 下载库</p>
@@ -18,7 +18,7 @@
 
 ---
 
-Tug Android 是 [Tug](https://github.com/mtdhllf/Tug-Desktop) 的 Android 版本。桌面端（Rust）侧重 BitTorrent 与 Windows 集成；Android 端以 **HTTP/HTTPS 多连接下载、断点续传、后台下载** 为核心，同时把下载内核拆成可对外复用的轻量 Kotlin 库。
+Tug-Android 是 [Tug](https://github.com/mtdhllf/Tug-Desktop) 的 Android 版本。桌面端（Rust）侧重 BitTorrent 与 Windows 集成；Android 端以 **HTTP/HTTPS 多连接下载、断点续传、后台下载** 为核心，同时把下载内核拆成可对外复用的轻量 Kotlin 库。
 
 ### 项目成果
 
